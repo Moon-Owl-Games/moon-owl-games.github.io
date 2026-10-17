@@ -39,7 +39,11 @@ a:hover { color: var(--text); }
 .top { border-bottom: 1px solid var(--line); }
 .top .bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 16px; min-height: 64px; }
 .brand { display: flex; align-items: center; gap: 10px; min-height: 44px; color: var(--text); text-decoration: none; font-weight: 650; letter-spacing: -0.01em; }
-.brand img { display: block; width: 28px; height: 28px; border-radius: 7px; }
+/* The studio's mark (src/mark.svg, from its logo's kit): its head in the text's colour, its eyes and beak in the kit's
+   lantern amber. */
+.brand .mark { display: block; flex: none; width: auto; height: 28px; }
+.brand .head { fill: currentColor; }
+.brand .eyes { fill: #f0a35e; }
 .top nav { display: flex; align-items: center; gap: 4px; }
 .top nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: var(--muted); text-decoration: none; font-size: 15px; }
 .top nav a:hover { color: var(--text); }
@@ -149,6 +153,8 @@ mark.todo { padding: 0 0.25em; border: 1px dashed var(--mark-line); border-radiu
 }
 
 .top { background: rgb(var(--sky)); }
+/* The studio's mark: the moon of the text, its eyes the lanterns' glow. */
+.brand .eyes { fill: var(--accent); }
 
 /* The banner: the hero's lines run the page's whole width (full) around the text's column (content); its first four
    rows (art) are the key art's, under the kicker, the title and the store's badge, centred as on the game's title
