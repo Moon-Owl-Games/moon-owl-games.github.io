@@ -4,6 +4,17 @@
    (rules and borders), --accent (links, focus), --shot-shadow (under the capture), --mark-bg, --mark-text and
    --mark-line (a field still to fill in). */
 
+/* The studio's name in the header, in its logo's font: Inter SemiBold (Inter 4.1 by Rasmus Andersson, SIL Open Font
+   License 1.1: fonts/OFL.txt), cut down to the name's letters (make_assets.py brand), the system's font for any other.
+   block: the name waits for it (4 KB) rather than showing first in another font. */
+@font-face {
+	font-family: "Inter";
+	src: url("fonts/inter-semibold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+	font-display: block;
+}
+
 :root {
 	--text-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	--wide: 1040px;
@@ -38,7 +49,10 @@ a:hover { color: var(--text); }
 /* The header: the studio, the policy, the other language. */
 .top { border-bottom: 1px solid var(--line); }
 .top .bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 16px; min-height: 64px; }
-.brand { display: flex; align-items: center; gap: 10px; min-height: 44px; color: var(--text); text-decoration: none; font-weight: 650; letter-spacing: -0.01em; }
+/* The studio's inline logo (previews/logo/kit/, lockup-inline): the mark 28 px high, the name in Inter SemiBold at the
+   page's 17 px, 10 px apart; the middle of its capitals at the mark's (Inter's line box centres them: its ascender
+   and descender put the box's middle at the capitals'). */
+.brand { display: flex; align-items: center; gap: 10px; min-height: 44px; color: var(--text); text-decoration: none; font-family: "Inter", var(--text-font); font-weight: 600; letter-spacing: -0.01em; }
 /* The studio's mark (src/mark.svg, from its logo's kit): its head in the text's colour, its eyes and beak in the kit's
    lantern amber. */
 .brand .mark { display: block; flex: none; width: auto; height: 28px; }
