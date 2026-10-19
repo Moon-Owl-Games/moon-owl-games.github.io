@@ -207,7 +207,7 @@ mark.todo { padding: 0 0.25em; border: 1px dashed var(--mark-line); border-radiu
 .hero .shot { grid-row: 7; margin: 40px 0 0; }
 
 /* The store's badge over the art (a placeholder: no store's logo), the policy's button under the capture. */
-.hero .btn:not(.ghost) { grid-row: 3; justify-self: center; min-height: 52px; margin-top: 24px; border-color: #a6a6a6; border-radius: 10px; background: #000; color: #fff; }
+.hero .btn:not(.ghost) { grid-row: 3; justify-self: center; min-height: 52px; margin-top: 24px; border-color: #a6a6a6; border-radius: 10px; background: #000; color: #fff; text-wrap: balance; }
 .hero .btn:not(.ghost)::before { content: ""; width: 14px; height: 16px; margin-right: 12px; background: currentColor; clip-path: polygon(0 0, 100% 50%, 0 100%); }
 .hero a.btn:not(.ghost):hover { border-color: #fff; background: #000; color: #fff; }
 .hero .btn.ghost { grid-row: 8; justify-self: start; margin-top: 40px; }
